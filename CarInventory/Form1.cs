@@ -30,14 +30,47 @@ namespace CarInventory
             Car c = new Car(year, make, colour, mileage);
             cars.Add(c);
 
+            DisplayItems();
+
+        }
+
+        private void RemoveInput_Click(object sender, EventArgs e)
+
+
+        {
+            string make = makeInput.Text;
+
+            for (int i = 0; i < cars.Count; i++)
+            {
+                if (make == cars[i].make) 
+                { 
+                     cars.RemoveAt(i);
+                }
+            }
+
+            //OR
+
+            //foreach(Car car in cars)
+            //{
+            //    if(make == car.make)
+            //    {
+            //        cars.Remove(car);
+            //        break;
+            //    }
+            //}
+
+           DisplayItems();
+        }
+
+        public void DisplayItems()
+        {
+
             outputLabel.Text = "";
 
-            foreach(Car car in cars)
+            foreach (Car car in cars)
             {
                 outputLabel.Text += $"{car.year} {car.make} {car.colour} {car.mileage}\n";
             }
-
-
         }
     }
 }

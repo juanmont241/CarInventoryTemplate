@@ -38,6 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.RemoveInput = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // yearInput
@@ -123,11 +124,22 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Mileage";
             // 
+            // RemoveInput
+            // 
+            this.RemoveInput.Location = new System.Drawing.Point(184, 144);
+            this.RemoveInput.Name = "RemoveInput";
+            this.RemoveInput.Size = new System.Drawing.Size(64, 23);
+            this.RemoveInput.TabIndex = 10;
+            this.RemoveInput.Text = "Remove";
+            this.RemoveInput.UseVisualStyleBackColor = true;
+            this.RemoveInput.Click += new System.EventHandler(this.RemoveInput_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(379, 366);
+            this.Controls.Add(this.RemoveInput);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -157,6 +169,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button RemoveInput;
     }
 }
 
